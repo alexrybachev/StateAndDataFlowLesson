@@ -35,7 +35,7 @@ struct ButtonView: View {
     
     var body: some View {
         Button(action: timer.startTimer ) {
-            Text("Start")
+            Text(timer.buttonTitle)
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
