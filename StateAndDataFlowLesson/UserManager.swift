@@ -8,9 +8,16 @@
 import Foundation
 
 final class UserManager: ObservableObject {
-    @Published var isRegistered = false
     
-    var name = ""
+    @Published var user = User()
     
+    var isValidatedName: Bool {
+        user.name.count >= 3
+    }
     
+    init() {}
+    
+    init(user: User) {
+        self.user = user
+    }
 }

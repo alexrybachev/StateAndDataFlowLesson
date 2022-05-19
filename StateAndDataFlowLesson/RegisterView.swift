@@ -10,25 +10,53 @@ import SwiftUI
 struct RegisterView: View {
     
     @EnvironmentObject private var userManager: UserManager
-    @State private var name = ""
     
     var body: some View {
         VStack {
-            TextField("Enter your name...", text: $name)
-                .multilineTextAlignment(.center)
+            UserNameTF(
+                name: $userManager.user.name,
+                isValidatedName: userManager.isValidatedName
+            )
             Button(action: registerUser ) {
                 HStack {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
                 }
             }
+            .disabled(!userManager.isValidatedName)
         }
+        .padding()
     }
     
-    private func registerUser() {
-        if !name.isEmpty {
-            userManager.name = name
-            userManager.isRegistered.toggle()
+}
+
+extension RegisterView {
+    func registerUser() {
+        if !userManager.user.name.isEmpty {
+            userManager.user.isRegistered.toggle()
+            DataManager.shared.saveUser(user: userManager.user)
+        }
+    }
+}
+
+
+struct UserNameTF: View {
+    
+    @Binding var name: String
+    var isValidatedName = false
+    
+    var body: some View {
+        ZStack {
+            TextField("Enter your name...", text: $name)
+                .multilineTextAlignment(.center)
+            HStack {
+                Spacer()
+                Text("\(name.count)")
+                    .font(.callout)
+                    .foregroundColor(isValidatedName ? .green : .red)
+                    .padding([.top, .trailing])
+            }
+            .padding(.bottom)
         }
     }
 }
