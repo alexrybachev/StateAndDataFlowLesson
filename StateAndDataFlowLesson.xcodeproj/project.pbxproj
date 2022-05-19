@@ -11,6 +11,7 @@
 		28EC71922835F58B0066582B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EC71912835F58B0066582B /* ContentView.swift */; };
 		28EC71942835F58D0066582B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28EC71932835F58D0066582B /* Assets.xcassets */; };
 		28EC71972835F58D0066582B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28EC71962835F58D0066582B /* Preview Assets.xcassets */; };
+		28EC719E2835F8EC0066582B /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EC719D2835F8EC0066582B /* TimeCounter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		28EC71912835F58B0066582B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		28EC71932835F58D0066582B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28EC71962835F58D0066582B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		28EC719D2835F8EC0066582B /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				28EC718F2835F58B0066582B /* StateAndDataFlowLessonApp.swift */,
 				28EC71912835F58B0066582B /* ContentView.swift */,
+				28EC719D2835F8EC0066582B /* TimeCounter.swift */,
 				28EC71932835F58D0066582B /* Assets.xcassets */,
 				28EC71952835F58D0066582B /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28EC719E2835F8EC0066582B /* TimeCounter.swift in Sources */,
 				28EC71922835F58B0066582B /* ContentView.swift in Sources */,
 				28EC71902835F58B0066582B /* StateAndDataFlowLessonApp.swift in Sources */,
 			);
