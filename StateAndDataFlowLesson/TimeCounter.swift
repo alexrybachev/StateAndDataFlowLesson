@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import Combine
 
-class TimeCounter {
+class TimeCounter: ObservableObject {
+    
+    let objectWillChange = PassthroughSubject<TimeCounter, Never>()
+    
     var counter = 3
     var timer: Timer?
     
@@ -27,6 +31,7 @@ class TimeCounter {
         } else {
             killTimer()
         }
+        objectWillChange.send(self)
     }
     
     private func killTimer() {
